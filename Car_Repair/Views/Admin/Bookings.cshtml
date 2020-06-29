@@ -1,0 +1,114 @@
+﻿@model IEnumerable<Car_Repair.Models.Bookings>
+
+@{
+    Layout = null;
+    if (Session["UserName"] == null)
+    {
+        Response.Redirect("~/Admin/Login");
+    }
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Car Repair | Price List</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+    <script src="../../Scripts/jquery-1.7.min.js"></script>
+    <script src="../../Scripts/jquery.easing.1.3.js"></script>
+    <!--[if lt IE 9]>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+    <div class="bg">
+        <header>
+            <div class="main wrap">
+                <h1><a href="index.html"><img src="../../Images/logo.png" alt=""></a></h1>
+                <p>8901 Marmora, Glasgow <span>8 (800) 552 5975</span></p>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li class="current"><a href='@Url.Action("Index", "Home")' class="home"><img src="../../Images/home.jpg" alt=""></a></li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Maintenance", "Maintenance", "Home")</li>
+                    <li>@Html.ActionLink("Repair", "Repair", "Home")</li>
+                    <li>@Html.ActionLink("Price List", "Price_List", "Home")</li>
+                    <li>@Html.ActionLink("Locations", "Create", "Locations")</li>
+                    <li>@Html.ActionLink("Booking", "Book", "Home")</li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+        </header>
+        <section id="content">
+            <div class="sub-page">
+                <div class="sub-page-left box-9">
+                    <h2 class="p4">Price List</h2>
+
+
+
+                    @*
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+                    *@
+
+                    <p>
+                        @Html.ActionLink("Back to Admin Page", "Index", "Admin")
+                    </p>
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CustomerName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.bookDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.carMake)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.carIssue)
+                            </th>
+                            
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CustomerName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.bookDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.carMake)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.carIssue)
+                                </td>
+                                
+                            </tr>
+                        }
+
+                    </table>
+                    @*
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+                    *@
+                </div>
+                @Html.Partial("_RightPage");
+            </div>
+        </section>
+        <footer>Car Repair &copy; 2045 | <a href="#">Privacy Policy</a> |Car Repo::</footer>
+    </div>
+</body>
+</html>

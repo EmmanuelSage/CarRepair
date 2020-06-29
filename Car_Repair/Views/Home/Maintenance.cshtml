@@ -1,0 +1,113 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Car Repair | Maintenance</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+    <script src="../../Scripts/jquery-1.7.min.js"></script>
+    <script src="../../Scripts/jquery.easing.1.3.js"></script>
+    <!--[if lt IE 9]>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+    <div class="bg">
+        <header>
+            <div class="main wrap">
+                <h1><a href="index.html"><img src="../../Images/logo.png" alt=""></a></h1>
+                <p>8901 Marmora, Glasgow <span>8 (800) 552 5975</span></p>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li class="current"><a href='@Url.Action("Index", "Home")' class="home"><img src="../../Images/home.jpg" alt=""></a></li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Maintenance", "Maintenance", "Home")</li>
+                    <li>@Html.ActionLink("Repair", "Repair", "Home")</li>
+                    <li>@Html.ActionLink("Price List", "Price_List", "Home")</li>
+                    <li>@Html.ActionLink("Locations", "Create", "Locations")</li>
+                    <li>@Html.ActionLink("Booking", "Book", "Home")</li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+        </header>
+        <section id="content">
+            <div class="sub-page">
+                <div class="sub-page-left">
+                    <h2 class="p4">Car Care Tutorials</h2>
+                    <div class="box-6">
+                        <img src="../../Images/page3-img1.jpg" alt="" class="img-indent-2">
+                        <div class="extra-wrap">
+                            <p class="text-2">Lesson 1</p>
+                            <a href="#" class="link">Adjusting The Pressure Gauge</a>
+                            <p class="upper">To adjust the pressure gauge is the most basic of things to do. i am going to just
+                            rant on and on about how to adjust it in a lot of paragraphs without actually telling you how to do it, nifty aii.
+                            you wil find that i am awesome like that. chai you have not still learnt how to do it. oya let me teach you.</p>
+                        </div>
+                    </div>
+                    <div class="box-6 top-2">
+                        <img src="../../Images/page3-img2.jpg" alt="" class="img-indent-2">
+                        <div class="extra-wrap">
+                            <p class="text-2">Lesson 2</p>
+                            <a href="#" class="link">Checking Battery Starter</a>
+                            <p class="upper">To Check Battery Starter is the most basic of things to do. i am going to just
+                            rant on and on about how to adjust it in a lot of paragraphs without actually telling you how to do it, nifty aii.
+                            you wil find that i am awesome like that. chai you have not still learnt how to do it. oya let me teach you.</p>
+                        </div>
+                    </div>
+                    <div class="box-6 top-2">
+                        <img src="../../Images/page3-img3.jpg" alt="" class="img-indent-2">
+                        <div class="extra-wrap">
+                            <p class="text-2">Lesson 3</p>
+                            <a href="#" class="link">Aligning the wheel axel</a>
+                            <p class="upper">To Align the wheel axel is the most basic of things to do. i am going to just
+                            rant on and on about how to adjust it in a lot of paragraphs without actually telling you how to do it, nifty aii.
+                            you wil find that i am awesome like that. chai you have not still learnt how to do it. oya let me teach you.</p>
+                        </div>
+                    </div>
+                    <div class="box-6 top-2">
+                        <img src="../../Images/page3-img4.jpg" alt="" class="img-indent-2">
+                        <div class="extra-wrap">
+                            <p class="text-2">Lesson 4</p>
+                            <a href="#" class="link">Gauge the tire pressure</a>
+                            <p class="upper">To Gauge the tire pressure is the most basic of things to do. i am going to just
+                            rant on and on about how to adjust it in a lot of paragraphs without actually telling you how to do it, nifty aii.
+                            you wil find that i am awesome like that. chai you have not still learnt how to do it. oya let me teach you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-page-right">
+                    <div class="shadow box-7 bot-2">
+                        <h2 class="p2">Maintenance</h2>
+                        <p class="text-3 p2">It’S IMPORTANT</p>
+                        <p class="upper">always make sure you take care of your care like jason statonham did in transporter</p>
+                        <img src="../../Images/page3-img5.jpg" alt="">
+                        <p class="upper">These are the common things to do:</p>
+                        <ul class="list-1">
+                            <li><a href="#">Oil Change</a></li>
+                            <li><a href="#">Maintenance Tune-Up</a></li>
+                            <li><a href="#">Transmission Service</a></li>
+                            <li><a href="#">A/C Service</a></li>
+                            <li><a href="#">Radiator Service</a></li>
+                        </ul>
+                    </div>
+                    <h2 class="p2">Guarantee</h2>
+                    <p class="text-3 upper p2">we guarantee your sucess</p>
+                    <p class="upper">Our company seeks to ensure that you are well insured </p>
+                    <a href="#" class="button-2 top-3">Read More</a>
+                </div>
+            </div>
+        </section>
+        <footer>Car Repair &copy; 2045 | <a href="#">Privacy Policy</a> |Car Repo:::</footer>
+    </div>
+</body>
+</html>
